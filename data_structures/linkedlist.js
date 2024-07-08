@@ -46,11 +46,14 @@ class LinkedList {
     display() {
         let currentNode = this.head;
         let result = '';
-        while (currentNode !== null) {
-            result += currentNode.value + ' ';
+        while (currentNode) {
+            result += currentNode.value;
+            if (currentNode.next) {
+                result += ' -> ';
+            }
             currentNode = currentNode.next;
         }
-        console.log(result.trim());
+        console.log(result);
     }
 }
 
@@ -59,3 +62,4 @@ const myList = new LinkedList(1);
 myList.append(2);
 myList.prepend(0);
 myList.forwardTraverse(); // 0 1 2
+myList.display(); // 0 -> 1 -> 2
