@@ -37,10 +37,12 @@ class LinkedList {
 
     forwardTraverse() {
         let currentNode = this.head;
+        const result = [];
         while (currentNode !== null) {
-            console.log(currentNode.value);
+            result.push(currentNode.value);
             currentNode = currentNode.next;
         }
+        return result;
     }
 
     display() {
@@ -53,13 +55,8 @@ class LinkedList {
             }
             currentNode = currentNode.next;
         }
-        console.log(result);
+        return result;
     }
 }
 
-// Example usage
-const myList = new LinkedList(1);
-myList.append(2);
-myList.prepend(0);
-myList.forwardTraverse(); // 0 1 2
-myList.display(); // 0 -> 1 -> 2
+export default LinkedList;
