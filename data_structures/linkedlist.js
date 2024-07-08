@@ -1,3 +1,12 @@
+/*
+ * LinkedList is a data structure that consists of a sequence of elements, each element points to the next element in the sequence.
+ * The elements are connected using pointers.
+ * The first element is called the head and the last element is called the tail.
+ * The tail points to null.
+ * The size of the linked list is the number of elements in the list.
+ * The linked list can be traversed in two ways: forward and backward.
+ */
+
 class Node {
     constructor(value) {
         this.value = value;
@@ -26,6 +35,14 @@ class LinkedList {
         this.size++;
     }
 
+    forwardTraverse() {
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            console.log(currentNode.value);
+            currentNode = currentNode.next;
+        }
+    }
+
     display() {
         let currentNode = this.head;
         let result = '';
@@ -41,4 +58,4 @@ class LinkedList {
 const myList = new LinkedList(1);
 myList.append(2);
 myList.prepend(0);
-myList.display(); // Output: 0 1 2                   
+myList.forwardTraverse(); // 0 1 2
