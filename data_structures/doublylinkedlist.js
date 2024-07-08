@@ -157,19 +157,8 @@ class DoublyLinkedList {
             current = current.next;
         }
         console.log(result);
+        return result;
     }
 }
 
-// Usage
-const list = new DoublyLinkedList();
-list.append(1);
-list.append(2);
-list.append(3);
-list.prepend(0);
-list.display(); // Expected output: "0->1->2->3"
-list.deleteHead(); // Removes the head node (0), resulting in "1->2->3"
-list.display(); // Expected output: "1->2->3"
-list.deleteTail(); // Removes the tail node (3), resulting in "1->2"
-list.display(); // Expected output: "1->2"
-list.insertAfter(4, 2); // Inserts 4 after 2, resulting in "1->2->4"
-list.display(); // Expected output: "1->2->4"
+export default DoublyLinkedList;
