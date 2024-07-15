@@ -19,3 +19,7 @@ This project aims to provide clear, concise, and practical implementations of al
 ## Getting Started <a name="getting-started"></a>
 
 To get started with this repository, clone it to your local machine:
+```
+git clone https://github.com/Bsakwa/JavaScriptDSA.git
+```
+
