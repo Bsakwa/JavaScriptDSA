@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import BubbleSort from '../searches/bubblesort.js';
+import BubbleSort from '../sorting/bubblesort.js';
 
 describe('BubbleSort Class', () => {
     it('should sort an array of numbers in ascending order', () => {
